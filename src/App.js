@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Cart from './Cart/Cart';
+import Catalog from './Components/Catalog/Catalog';
+import AllCategories from './Components/Filter/AllCategories';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <div className='shipping-cont'>
+        <p className='shipping'>DIRECT SHIPPING TO 100 COUNTRIES</p>
+      </div>
+
+      <div className='main-header-cont'>
+        <h1>Aesthetic</h1>
+      </div>
+
+      <div>
+        <AllCategories/>
+      </div>
+
+      <div className='cart-catalog-cont'>
+        <div className='cart'><Cart/></div>
+        <div className='catalog'><Catalog/></div>
+      </div>
+
+
+
     </div>
-  );
+  )
+
 }
 
 export default App;

@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #c9ccd522;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shipping-cont {
+  display: flex;
+  justify-content: center;
+  background: rgba(246, 221, 212, 0.597);
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shipping {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.main-header-cont {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgb(243, 200, 200);
+}
+
+.all-categories-cont {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid rgb(243, 200, 200);
+  font-size: 23px;
+}
+
+.cart-catalog-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-catalog-cont .cart {
+  flex: 1;
+}
+
+.cart-catalog-cont .catalog {
+  flex: 5;
+  border-left: 1px solid rgb(243, 200, 200);
+}
+
+img {
+  width: 200px;
+  height: 250px;
+}
+
+.catalog-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalogItem-cont {
+  margin: 15px 15px 10px 25px;
+}
+
+.btnSelectedCategory {
+  background-color: rgba(243, 200, 200, 0.582);
+  cursor: pointer;
+}
+
+.btnCategory:hover {
+  background-color: rgba(250, 239, 239, 0.582);
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.catalogItem-description-cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.addToBag-quantity-cont {
+  display: flex;
+}
+
+.price-cont {
+  display: flex;
+  align-items: center;
+}
+
+.changeQuantity-cont {
+  display: flex;
+}
+
+.increm-decrem-cont {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.quantity-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+
+.addToBag-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.iconChevron {
+  width: 10px;
+  height: 10px;
+}
+
+.iconAdd {
+  width: 25px;
+  height: 25px;
+}
+
+.addBtn{
+  border: none;
+  background-color: #C9CCD5;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chevron {
+  border: none;
+}
+
+.chevron1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.251);
+}
+
+.cart {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 2%;
+  margin-top: 5px;
+}
+
+.cart-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.cartItem-cont {
+  border-bottom: 1px solid rgb(243, 200, 200);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.thumbnail {
+  width: 50px;
+  height: 60px;
+}
+
+.total {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  background-color: rgba(243, 200, 200, 0.267);
+  padding: 10px;
+  width: 80%;
+}
+
+.iconDelete {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color: #151515e1;
+}
+
+h2, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.price, .quantity, .cartItem, .cartItemPrice, .cartItemQuantity {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+@media all and (max-width:830px) {
+
+  .all-categories-cont {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn {
+    padding: 5px 15px;
   }
+
+  .cart-catalog-cont {
+  display: flex;
+  justify-content: space-between;
+ }
+
+  .cart-catalog-cont .cart {
+    flex: 1.5;
+  }
+
+  .cart-catalog-cont .catalog {
+    flex: 4.5;
+  }
+
+  img {
+    width: 220px;
+    height: 270px;
+  }
+  
+}
+
+
+@media all and (max-width:540px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .all-categories-cont {
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 5px 15px;
+  }
+
+  .cart-catalog-cont {
+  display: flex;
+  justify-content: space-between;
+ }
+ 
+  .cart-catalog-cont .cart {
+    flex: 2;
+  }
+
+  .cart-catalog-cont .catalog {
+    flex: 4;
+  }
+
+  img {
+    width: 200px;
+    height: 250px;
+  }
+
 }
